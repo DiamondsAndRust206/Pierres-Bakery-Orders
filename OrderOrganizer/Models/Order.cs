@@ -15,7 +15,7 @@ namespace OrderOrganizer.Models
     public int Id { get; }
     public List<Order> Orders { get; set; }
     
-    public Order(string name,string title ,int totalprice,int phonenumber,string date)
+    public Order (string name, string title, int totalprice, int phonenumber, string date)
     {
       Name = name;
       Title = title;
