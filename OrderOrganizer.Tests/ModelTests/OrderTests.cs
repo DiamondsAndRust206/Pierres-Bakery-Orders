@@ -5,15 +5,15 @@ using System;
 
 namespace VendorOrder.Tests
 {
-  [TestClass]
-  public class OrderTests : IDisposable
-  {
+  // [TestClass]
+  // public class OrderTests : IDisposable
+  // {
 
-    public void Dispose()
-    {
-    Order.ClearAll();
-    }
+  //   public void Dispose()
+  //   {
+  //   Order.ClearAll();
+  //   }
 
-  }
+  // }
 
 }
