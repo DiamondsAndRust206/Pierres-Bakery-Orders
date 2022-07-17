@@ -73,6 +73,18 @@ namespace OrderOrganizer.Tests
       Assert.AreEqual(vendor01, nameResult);
       Assert.AreEqual(description, descriptionResult);
     }
+    [TestMethod]
+    public void AddItem_ComboOrderWithVendor_OrderList()
+    {
+      int price = 90;
+      Order newOrder = new Order("name","title",price, 2065551234, "07/16/2022");
+      List<Order> newList = new List<Order> { newOrder };
+      string vendor01 = "Giovannis Restaurante";
+      Vendor newVendor = new Vendor(vendor01, "Fine italian cuisine");
+      newVendor.AddOrder(newOrder);
+      List<Order> result = newVendor.Orders;
+      CollectionAssert.AreEqual(newList, result);
+    }
 
   }
 }

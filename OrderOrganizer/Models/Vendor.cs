@@ -8,6 +8,7 @@ namespace OrderOrganizer.Models
     public string Description { get; set; }
     public string VendorName { get; set; }
     public int Id { get; }
+    public List<Order> Orders { get; set; }
 
     public Vendor(string vendor, string description)
     {
@@ -15,6 +16,7 @@ namespace OrderOrganizer.Models
       VendorName = vendor;
       _instances.Add(this);
       Id = _instances.Count;
+      Orders = new List<Order>{};
     }
 
     public static List<Vendor> GetAll()
@@ -30,6 +32,11 @@ namespace OrderOrganizer.Models
     public static Vendor Find(int searchId)
     {
       return _instances[searchId - 1];
+    }
+
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order);
     }
 
   }
