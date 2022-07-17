@@ -10,23 +10,23 @@
 </head>
 <body>
 
-  <h1>Add a new Order to @Model.VendorName</h1>
+<h1>Add a new Order to @Model.VendorName</h1>
 
-  <form action="/vendors" method="post"> @* fix action *@
-  <label for="name">Name</label>
-    <input id="name" name="name" type="text">
-    <label for="title">Title</label> 
-    <input id="title" name="title" type="text">
-    <label for="vendorId"></label>
-    <input id="vendorId" name="vendorId" type="hidden">
-    <label for="phonenumber">Phone Number</label>
-    <input id="phonenumber" name="phonenumber" type="number">
-    <label for="totalprice">Toatal Price</label>
-    <input id="totalprice" name="totalprice" type="number">
-    <label for="date">Order Date</label>
-    <input id="date" name="date" type="text">
-    <button type='submit'>Add </button>
-  </form>
+<form action="/vendors/@Model.Id/orders" method="post">
+<label for="name">Name</label>
+  <input id="name" name="name" type="text">
+  <label for="title">Title</label> 
+  <input id="title" name="title" type="text">
+  <label for="vendorId"></label>
+  <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
+  <label for="phonenumber">Phone Number</label>
+  <input id="phonenumber" name="phonenumber" type="number">
+  <label for="totalprice">Toatal Price</label>
+  <input id="totalprice" name="totalprice" type="number">
+  <label for="date">Order Date</label>
+  <input id="date" name="date" type="text">
+  <button type='submit'>Add </button>
+</form>
 
 </body>
 </html>
